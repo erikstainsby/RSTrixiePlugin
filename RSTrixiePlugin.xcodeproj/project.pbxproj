@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031610A114ECB935001FFC9F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031610A014ECB935001FFC9F /* Cocoa.framework */; };
+		031610AB14ECB935001FFC9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 031610A914ECB935001FFC9F /* InfoPlist.strings */; };
+		031610AF14ECB935001FFC9F /* RSTrixiePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 031610AE14ECB935001FFC9F /* RSTrixiePlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0316109D14ECB935001FFC9F /* RSTrixiePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSTrixiePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		031610A014ECB935001FFC9F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		031610A314ECB935001FFC9F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		031610A414ECB935001FFC9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		031610A514ECB935001FFC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		031610A814ECB935001FFC9F /* RSTrixiePlugin-Info.plist */ = {isa = PBXFileReference; path = "RSTrixiePlugin-Info.plist"; sourceTree = "<group>"; };
+		031610AA14ECB935001FFC9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		031610AC14ECB935001FFC9F /* RSTrixiePlugin-Prefix.pch */ = {isa = PBXFileReference; path = "RSTrixiePlugin-Prefix.pch"; sourceTree = "<group>"; };
+		031610AD14ECB935001FFC9F /* RSTrixiePlugin.h */ = {isa = PBXFileReference; path = RSTrixiePlugin.h; sourceTree = "<group>"; };
+		031610AE14ECB935001FFC9F /* RSTrixiePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSTrixiePlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0316109914ECB935001FFC9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031610A114ECB935001FFC9F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0316109114ECB935001FFC9F = {
+			isa = PBXGroup;
+			children = (
+				031610A614ECB935001FFC9F /* RSTrixiePlugin */,
+				0316109F14ECB935001FFC9F /* Frameworks */,
+				0316109E14ECB935001FFC9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0316109E14ECB935001FFC9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0316109D14ECB935001FFC9F /* RSTrixiePlugin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0316109F14ECB935001FFC9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				031610A014ECB935001FFC9F /* Cocoa.framework */,
+				031610A214ECB935001FFC9F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		031610A214ECB935001FFC9F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				031610A314ECB935001FFC9F /* AppKit.framework */,
+				031610A414ECB935001FFC9F /* CoreData.framework */,
+				031610A514ECB935001FFC9F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		031610A614ECB935001FFC9F /* RSTrixiePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				031610AD14ECB935001FFC9F /* RSTrixiePlugin.h */,
+				031610AE14ECB935001FFC9F /* RSTrixiePlugin.m */,
+				031610A714ECB935001FFC9F /* Supporting Files */,
+			);
+			path = RSTrixiePlugin;
+			sourceTree = "<group>";
+		};
+		031610A714ECB935001FFC9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				031610A814ECB935001FFC9F /* RSTrixiePlugin-Info.plist */,
+				031610A914ECB935001FFC9F /* InfoPlist.strings */,
+				031610AC14ECB935001FFC9F /* RSTrixiePlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0316109A14ECB935001FFC9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0316109C14ECB935001FFC9F /* RSTrixiePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031610B214ECB935001FFC9F /* Build configuration list for PBXNativeTarget "RSTrixiePlugin" */;
+			buildPhases = (
+				0316109814ECB935001FFC9F /* Sources */,
+				0316109914ECB935001FFC9F /* Frameworks */,
+				0316109A14ECB935001FFC9F /* Headers */,
+				0316109B14ECB935001FFC9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSTrixiePlugin;
+			productName = RSTrixiePlugin;
+			productReference = 0316109D14ECB935001FFC9F /* RSTrixiePlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0316109314ECB935001FFC9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Roaring Sky";
+			};
+			buildConfigurationList = 0316109614ECB935001FFC9F /* Build configuration list for PBXProject "RSTrixiePlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0316109114ECB935001FFC9F;
+			productRefGroup = 0316109E14ECB935001FFC9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0316109C14ECB935001FFC9F /* RSTrixiePlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0316109B14ECB935001FFC9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031610AB14ECB935001FFC9F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0316109814ECB935001FFC9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031610AF14ECB935001FFC9F /* RSTrixiePlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		031610A914ECB935001FFC9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				031610AA14ECB935001FFC9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		031610B014ECB935001FFC9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		031610B114ECB935001FFC9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		031610B314ECB935001FFC9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RSTrixiePlugin/RSTrixiePlugin-Prefix.pch";
+				INFOPLIST_FILE = "RSTrixiePlugin/RSTrixiePlugin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		031610B414ECB935001FFC9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RSTrixiePlugin/RSTrixiePlugin-Prefix.pch";
+				INFOPLIST_FILE = "RSTrixiePlugin/RSTrixiePlugin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0316109614ECB935001FFC9F /* Build configuration list for PBXProject "RSTrixiePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031610B014ECB935001FFC9F /* Debug */,
+				031610B114ECB935001FFC9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031610B214ECB935001FFC9F /* Build configuration list for PBXNativeTarget "RSTrixiePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031610B314ECB935001FFC9F /* Debug */,
+				031610B414ECB935001FFC9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0316109314ECB935001FFC9F /* Project object */;
+}
