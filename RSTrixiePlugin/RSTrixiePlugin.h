@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RSTrixiePlugin : NSObject
+@interface RSTrixiePlugin : NSViewController
+{
+	NSString * _name;
+	NSMenuItem * _menuItem;
+}
+
+@property (retain) IBOutlet NSString * name;
+@property (retain) IBOutlet NSMenuItem * menuItem;
 
 @end
