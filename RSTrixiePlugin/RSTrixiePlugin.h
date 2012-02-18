@@ -7,14 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RSTrixieRule.h"
+
 
 @interface RSTrixiePlugin : NSViewController
 {
 	NSString * _name;
-	NSMenuItem * _menuItem;
+	BOOL _multiRowForm; 
 }
 
+@property (assign,getter=isMultiRowForm) IBOutlet BOOL multiRowForm;
 @property (retain) IBOutlet NSString * name;
-@property (retain) IBOutlet NSMenuItem * menuItem;
+
+@property (retain) IBOutlet NSMutableArray * rules;
+@property (assign) IBOutlet NSInteger indexOfLastReturned;
+
+- (RSTrixieRule*)	fetchRule;
 
 @end
