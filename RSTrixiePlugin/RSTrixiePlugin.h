@@ -13,15 +13,16 @@
 @interface RSTrixiePlugin : NSViewController
 {
 	NSString * _name;
-	BOOL _multiRowForm; 
+	BOOL _multiRowForm;
+	BOOL _hasSelectorField;
+	NSTextField * _selectorField;
 }
 
-@property (assign,getter=isMultiRowForm) IBOutlet BOOL multiRowForm;
 @property (retain) IBOutlet NSString * name;
+@property (assign,getter=isMultiRowForm) BOOL multiRowForm;
+@property (readonly,getter=hasSelectorField) BOOL hasSelectorField;
+@property (retain) IBOutlet NSTextField * selectorField;
 
 @property (retain) IBOutlet NSMutableArray * rules;
-@property (assign) IBOutlet NSInteger indexOfLastReturned;
-
-- (RSTrixieRule*)	fetchRule;
 
 @end

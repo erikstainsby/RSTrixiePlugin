@@ -11,12 +11,21 @@
 #define kRSErrorFormat @"%s is not implemented yet in subclass %@"
 #define kRSExceptionName @"RSTrixieNotImplementedException"
 
+@interface RSTrixiePlugin (PRIVATE) 
+
+@property (readwrite,getter=hasSelectorField) BOOL hasSelectorField;
+
+@end
+
+
 @implementation RSTrixiePlugin
 
-@synthesize multiRowForm=_multiRowForm;
 @synthesize name=_name;
+@synthesize multiRowForm=_multiRowForm;
+@synthesize hasSelectorField=_hasSelectorField;
+@synthesize selectorField=_selectorField;
+
 @synthesize rules;
-@synthesize indexOfLastReturned;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if( nibNameOrNil == nil ) nibNameOrNil = @"RSTrixiePluginDefaultView";
@@ -24,9 +33,11 @@
     if (self) {
 		_name = @"Unnamed plugin";
 		_multiRowForm = NO;
+		_hasSelectorField=NO;
     }
     return self;
 }
+
 - (NSString*) nibName {
 	return [self className];
 }
@@ -35,13 +46,6 @@
 		//	NSLog(@"%s- [%04d] myBundlePath: %@", __PRETTY_FUNCTION__, __LINE__, myBundlePath);
 	return [NSBundle bundleWithPath:myBundlePath];
 }
-
-- (RSTrixieRule*) fetchRule {
-	RSTrixieRule * rule = [rules objectAtIndex:indexOfLastReturned+1];
-	indexOfLastReturned++;
-	return rule;
-}
-
 
 
 

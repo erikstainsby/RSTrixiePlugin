@@ -12,6 +12,8 @@
 		031610AF14ECB935001FFC9F /* RSTrixiePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 031610AE14ECB935001FFC9F /* RSTrixiePlugin.m */; };
 		031610B514ECBCB2001FFC9F /* RSTrixiePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 031610AD14ECB935001FFC9F /* RSTrixiePlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		031610B714ECBD0D001FFC9F /* RSTrixiePluginDefaultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031610B614ECBD0D001FFC9F /* RSTrixiePluginDefaultView.xib */; };
+		03FE38A214EF3CE900C29234 /* RSTrixieRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 03FE38A014EF3CE900C29234 /* RSTrixieRule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03FE38A314EF3CE900C29234 /* RSTrixieRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FE38A114EF3CE900C29234 /* RSTrixieRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		031610AD14ECB935001FFC9F /* RSTrixiePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSTrixiePlugin.h; sourceTree = "<group>"; };
 		031610AE14ECB935001FFC9F /* RSTrixiePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSTrixiePlugin.m; sourceTree = "<group>"; };
 		031610B614ECBD0D001FFC9F /* RSTrixiePluginDefaultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSTrixiePluginDefaultView.xib; sourceTree = "<group>"; };
+		03FE38A014EF3CE900C29234 /* RSTrixieRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTrixieRule.h; sourceTree = "<group>"; };
+		03FE38A114EF3CE900C29234 /* RSTrixieRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTrixieRule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				031610B614ECBD0D001FFC9F /* RSTrixiePluginDefaultView.xib */,
 				031610AD14ECB935001FFC9F /* RSTrixiePlugin.h */,
 				031610AE14ECB935001FFC9F /* RSTrixiePlugin.m */,
+				03FE38A014EF3CE900C29234 /* RSTrixieRule.h */,
+				03FE38A114EF3CE900C29234 /* RSTrixieRule.m */,
 				031610A714ECB935001FFC9F /* Supporting Files */,
 			);
 			path = RSTrixiePlugin;
@@ -105,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031610B514ECBCB2001FFC9F /* RSTrixiePlugin.h in Headers */,
+				03FE38A214EF3CE900C29234 /* RSTrixieRule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031610AF14ECB935001FFC9F /* RSTrixiePlugin.m in Sources */,
+				03FE38A314EF3CE900C29234 /* RSTrixieRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				031610B414ECB935001FFC9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
