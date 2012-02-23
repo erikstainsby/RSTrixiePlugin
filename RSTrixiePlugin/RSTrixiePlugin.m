@@ -11,7 +11,7 @@
 #define kRSErrorFormat @"%s is not implemented yet in subclass %@"
 #define kRSExceptionName @"RSTrixieNotImplementedException"
 
-@interface RSTrixiePlugin (PRIVATE) 
+@interface RSTrixiePlugin () 
 
 @property (readwrite,getter=hasSelectorField) BOOL hasSelectorField;
 
@@ -24,6 +24,8 @@
 @synthesize multiRowForm=_multiRowForm;
 @synthesize hasSelectorField=_hasSelectorField;
 @synthesize selectorField=_selectorField;
+@synthesize preventDefault=_preventDefault;
+@synthesize stopBubbling=_stopBubbling;
 
 @synthesize rules;
 
@@ -47,6 +49,19 @@
 	return [NSBundle bundleWithPath:myBundlePath];
 }
 
+- (NSString *) bindEvent {
+	return [[self name] lowercaseString];
+}
+- (NSString *) bindSelector {
+	return [[self selectorField] stringValue];
+}
 
+- (NSString *) callbackFunction {
+	return [NSString stringWithFormat:@"function(event,elem){alert('/* Method callbackFunction: needs an override in plugin: %@. */')});", [self className]];
+}
+
+- (NSString *) predicate {
+	return @"";
+}
 
 @end
