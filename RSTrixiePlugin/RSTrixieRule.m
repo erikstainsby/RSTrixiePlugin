@@ -16,19 +16,24 @@
 @synthesize preventDefault = _preventDefault;
 @synthesize stopBubbling = _stopBubbling;
 
-@synthesize callbackFunction = _callbackFunction;	// plugin defines the markup in this method 
+@synthesize reactionSelector=_reactionSelector;
+@synthesize reactionBehaviour=_reactionBehaviour;
 
+@synthesize callbackFunction = _callbackFunction;	// plugin defines the markup in this method 
 @synthesize conditionSelector = _conditionSelector;	// plugin hasSelector ?
 @synthesize predicate = _predicate;
+@synthesize comment = _comment;
 
 - (NSString *) description {
 	NSString * desc = [NSString stringWithFormat:@"<%@ %p> { \n",[self className],self];
-	
+	desc = [desc stringByAppendingFormat:@"\t'comment':'%@',\n",_comment];
 	desc = [desc stringByAppendingFormat:@"\t'bindEvent':'%@',\n",_bindEvent];
 	desc = [desc stringByAppendingFormat:@"\t'actionSelector':%i,\n",_actionSelector];
 	desc = [desc stringByAppendingFormat:@"\t'bindSelector':'%@',\n",_bindSelector];
 	desc = [desc stringByAppendingFormat:@"\t'preventDefault':%i,\n",_preventDefault];
 	desc = [desc stringByAppendingFormat:@"\t'stopBubbling':%i,\n",_stopBubbling];
+	desc = [desc stringByAppendingFormat:@"\t'reactionSelector:%@,\n",_reactionSelector];
+	desc = [desc stringByAppendingFormat:@"\t'reactionBehaviour:%@,\n",_reactionBehaviour];	
 	desc = [desc stringByAppendingFormat:@"\t'callbackFunction':\"%@\"',\n",_callbackFunction];
 	desc = [desc stringByAppendingFormat:@"\t'conditionSelector':'%@',\n",_conditionSelector];
 	desc = [desc stringByAppendingFormat:@"\t'predicate':'%@',\n",_predicate];

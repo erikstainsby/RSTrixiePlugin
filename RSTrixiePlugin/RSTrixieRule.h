@@ -19,8 +19,11 @@
 @property (assign) BOOL stopBubbling;
 
 
-	// Reaction form's attributes - describing a behaviour
-	// this block creates the callback function encoded
+	// Reaction form's attributes - describes a behaviour
+@property (retain) IBOutlet NSString * reactionSelector;
+@property (retain) IBOutlet NSString * reactionBehaviour;
+
+	// this block creates the callback function jQuery-encoded
 
 @property (retain) IBOutlet NSString * callbackFunction; 
 
@@ -29,9 +32,9 @@
 @property (assign,getter=hasConditionSelector) BOOL conditionSelector;
 @property (retain) IBOutlet NSString * predicate;		// 
 
+@property (retain) IBOutlet NSString * comment;
 
 - (NSString *) description;
-
 - (NSString *) emitScript;
 
 @end

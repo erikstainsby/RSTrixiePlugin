@@ -19,13 +19,21 @@
 @property (assign,getter=isMultiRowForm) BOOL multiRowForm;
 @property (readonly,getter=hasSelectorField) BOOL hasSelectorField;
 @property (retain) IBOutlet NSTextField * selectorField;
-@property (assign) BOOL preventDefault;
-@property (assign) BOOL stopBubbling;
+
+@property (retain) IBOutlet NSButton * preventDefaultButton;
+@property (retain) IBOutlet NSButton * stopBubblingButton;
 
 @property (retain) IBOutlet NSMutableArray * rules;
 
 
+- (BOOL) hasPreventDefaultButton; 
+- (BOOL) hasStopBubblingButton; 
+- (BOOL) preventDefault; 
+- (BOOL) stopBubbling; 
+
 - (NSString *) bindEvent;
+- (NSString *) reactionSelector;
+- (NSString *) reactionBehaviour;
 - (NSString *) callbackFunction;
 - (NSString *) predicate;
 

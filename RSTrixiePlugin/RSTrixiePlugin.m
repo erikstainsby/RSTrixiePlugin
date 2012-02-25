@@ -24,8 +24,9 @@
 @synthesize multiRowForm=_multiRowForm;
 @synthesize hasSelectorField=_hasSelectorField;
 @synthesize selectorField=_selectorField;
-@synthesize preventDefault=_preventDefault;
-@synthesize stopBubbling=_stopBubbling;
+
+@synthesize preventDefaultButton=_preventDefaultButton;
+@synthesize stopBubblingButton=_stopBubblingButton;
 
 @synthesize rules;
 
@@ -49,6 +50,21 @@
 	return [NSBundle bundleWithPath:myBundlePath];
 }
 
+
+- (BOOL) hasPreventDefaultButton { 
+	return NO; 
+} 
+- (BOOL) hasStopBubblingButton { 
+	return NO; 
+} 
+- (BOOL) preventDefault {
+	return NO;
+}
+- (BOOL) stopBubbling {
+	return NO;
+}
+
+
 - (NSString *) bindEvent {
 	return [[self name] lowercaseString];
 }
@@ -56,12 +72,20 @@
 	return [[self selectorField] stringValue];
 }
 
+- (NSString *) reactionSelector {
+	return [NSString stringWithFormat:@"Method %@ needs an override in subclass: %@",_cmd,[self className]];
+}
+
+- (NSString *) reactionBehaviour {
+	return [NSString stringWithFormat:@"Method %@ needs an override in subclass: %@",_cmd,[self className]];	
+}
+
 - (NSString *) callbackFunction {
-	return [NSString stringWithFormat:@"function(event,elem){alert('/* Method callbackFunction: needs an override in plugin: %@. */')});", [self className]];
+		return [NSString stringWithFormat:@"Method %@ needs an override in subclass: %@",_cmd,[self className]];
 }
 
 - (NSString *) predicate {
-	return @"";
+		return [NSString stringWithFormat:@"Method %@ needs an override in subclass: %@",_cmd,[self className]];
 }
 
 @end
