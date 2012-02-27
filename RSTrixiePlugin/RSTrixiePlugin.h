@@ -11,31 +11,11 @@
 
 
 @interface RSTrixiePlugin : NSViewController
-{
 
-}
-
-@property (retain) IBOutlet NSString * name;
-@property (assign,getter=isMultiRowForm) BOOL multiRowForm;
-@property (readonly,getter=hasSelectorField) BOOL hasSelectorField;
-@property (retain) IBOutlet NSTextField * selectorField;
-
-@property (retain) IBOutlet NSButton * preventDefaultButton;
-@property (retain) IBOutlet NSButton * stopBubblingButton;
-
-@property (retain) IBOutlet NSMutableArray * rules;
+@property (retain) IBOutlet NSString * pluginName;
 
 
-- (BOOL) hasPreventDefaultButton; 
-- (BOOL) hasStopBubblingButton; 
-- (BOOL) preventDefault; 
-- (BOOL) stopBubbling; 
 
-- (NSString *) bindEvent;
-- (NSString *) reactionSelector;
-- (NSString *) reactionBehaviour;
-- (NSString *) callbackFunction;
-- (NSString *) predicate;
-
+- (BOOL) hasSelectorField;
 
 @end
