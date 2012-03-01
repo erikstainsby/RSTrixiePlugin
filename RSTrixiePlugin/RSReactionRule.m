@@ -29,7 +29,7 @@
 	}
 	NSString * response = [NSString stringWithFormat:@"$('%@').%@(",target,action];
 	if( delta ) {
-		response = [response stringByAppendingFormat:@",'%@'",delta];
+		response = [response stringByAppendingFormat:@"'%@'",delta];
 	}
 	if( delay ) {
 		response = [response stringByAppendingFormat:@",%i",delay];
@@ -50,13 +50,10 @@
 	desc = [desc stringByAppendingFormat:@"\t'delta':'%@',\n",			[self delta]];	
 	desc = [desc stringByAppendingFormat:@"\t'delay':%lu,\n",			[self delay]];	
 	desc = [desc stringByAppendingFormat:@"\t'period':%lu,\n",			[self period]];	
-
 	desc = [desc stringByAppendingFormat:@"\t'callback':\"%@\"\n",	[self callback]];
-	
 	desc = [desc stringByAppendingString:@"}"];
 	return desc;
 }
-
 
 - (id) valueForUndefinedKey:(NSString *) key {
 	NSLog(@"%s- [%04d] Undefined key: %@", __PRETTY_FUNCTION__, __LINE__, key);
