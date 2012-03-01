@@ -19,5 +19,17 @@
 @property (retain) NSString * comment;
 
 - (NSString *) description;
+- (NSString *) emitScript;
+
+- (NSString *) selector;
+- (NSString *) event;
+- (BOOL) preventDefault;
+- (BOOL) stopBubbling;
+
+- (NSString *) callback;
+- (NSString *) prerequisite;
+
+- (id) valueForUndefinedKey:(NSString *) key;
+
 
 @end

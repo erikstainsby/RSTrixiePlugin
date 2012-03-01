@@ -14,4 +14,8 @@
 @property (retain) NSString * predicate;
 @property (retain) NSString * valueOf;
 
+- (NSString *) prerequisite;
+
+- (id) valueForUndefinedKey:(NSString *) key;
+
 @end

@@ -9,13 +9,18 @@
 #import "RSAbstractRule.h"
 
 @interface RSReactionRule : RSAbstractRule
-
+{
+	NSString * _callback;
+}
 @property (retain) NSString * target;
 @property (retain) NSString * action;
 @property (retain) NSString * delta;
 @property (assign) NSInteger delay;
 @property (assign) NSInteger period;
 
-@property (retain) NSString * callback;
+- (NSString *) callback;
+- (void) setCallback:(NSString *) aFunc;
+
+- (id) valueForUndefinedKey:(NSString *) key;
 
 @end

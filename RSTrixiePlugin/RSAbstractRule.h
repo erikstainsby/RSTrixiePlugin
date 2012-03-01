@@ -10,5 +10,6 @@
 
 @interface RSAbstractRule : NSObject
 
+- (id) valueForUndefinedKey:(NSString *) key;
 
 @end

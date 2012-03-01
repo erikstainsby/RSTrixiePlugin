@@ -20,10 +20,14 @@
 	desc = [desc stringByAppendingFormat:@"\t'event':'%@',\n",			[self event]];
 	desc = [desc stringByAppendingFormat:@"\t'selector':'%@',\n",		[self selector]];
 	desc = [desc stringByAppendingFormat:@"\t'preventDefault':%i,\n",	[self preventDefault]];
-	desc = [desc stringByAppendingFormat:@"\t'stopBubbling':%i,\n",		[self stopBubbling]];
-	desc = [desc stringByAppendingString:@"}\n"];
+	desc = [desc stringByAppendingFormat:@"\t'stopBubbling':%i\n",		[self stopBubbling]];
+	desc = [desc stringByAppendingString:@"}"];
 	return desc;
 }
 
+- (id) valueForUndefinedKey:(NSString *) key {
+	NSLog(@"%s- [%04d] Undefined key: %@", __PRETTY_FUNCTION__, __LINE__, key);
+	return @"undefined";
+}
 
 @end
