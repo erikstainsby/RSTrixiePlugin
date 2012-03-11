@@ -10,49 +10,10 @@
 
 @implementation RSReactionRule
 
-@synthesize target;
-@synthesize action;
-@synthesize delta;
-@synthesize delay;
-@synthesize period;
-
-
-- (void) setCallback:(NSString *) aFunc {
-	_callback = aFunc;
-}
-
-
-- (NSString *) callback {
-	
-	if( nil != _callback ) {
-		return _callback;
-	}
-	NSString * response = [NSString stringWithFormat:@"$('%@').%@(",target,action];
-	if( delta ) {
-		response = [response stringByAppendingFormat:@"'%@'",delta];
-	}
-	if( delay ) {
-		response = [response stringByAppendingFormat:@",%i",delay];
-	}
-	if( period ) {
-		response = [response stringByAppendingFormat:@",%i",period];
-	}
-	response = [response stringByAppendingString:@");"];
-	return response;
-}
-
+@synthesize script=_script;
 
 - (NSString *) description {
-	NSString * desc = [NSString stringWithFormat:@"<%@ %p> { \n",[self className],self];
-
-	desc = [desc stringByAppendingFormat:@"\t'target':'%@',\n",			[self target]];
-	desc = [desc stringByAppendingFormat:@"\t'action':'%@',\n",			[self action]];
-	desc = [desc stringByAppendingFormat:@"\t'delta':'%@',\n",			[self delta]];	
-	desc = [desc stringByAppendingFormat:@"\t'delay':%lu,\n",			[self delay]];	
-	desc = [desc stringByAppendingFormat:@"\t'period':%lu,\n",			[self period]];	
-	desc = [desc stringByAppendingFormat:@"\t'callback':\"%@\"\n",	[self callback]];
-	desc = [desc stringByAppendingString:@"}"];
-	return desc;
+	return _script;
 }
 
 - (id) valueForUndefinedKey:(NSString *) key {

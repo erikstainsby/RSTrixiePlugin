@@ -15,6 +15,6 @@
 @property (assign) BOOL preventDefault;
 @property (assign) BOOL stopBubbling;
 
-- (id) valueForUndefinedKey:(NSString *) key;
+- (NSString*) trigger;
 
 @end

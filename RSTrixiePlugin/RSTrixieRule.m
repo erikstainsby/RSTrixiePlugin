@@ -28,35 +28,12 @@
     self = [super init];
     if (self) {
 		action =		[[RSActionRule alloc] init];
-        reactions =		[NSMutableArray array];
-		conditions =	[NSMutableArray array];
+        reactions =		[NSArray array];
+		conditions =	[NSArray array];
 		_comment =		@"";
     }
     return self;
 }
-
-
-- (NSString *) selector {
-	return [action selector];
-}
-- (NSString *) event {
-	return [action event];
-}
-- (BOOL) preventDefault {
-	return [action preventDefault];
-}
-- (BOOL) stopBubbling {
-	return  [action stopBubbling];
-}
-
-- (NSString *) callback {
-	return [[reactions objectAtIndex:0] callback];
-}
-
-- (NSString *) prerequisite {
-	return [[conditions objectAtIndex:0] prerequisite];
-}
-
 - (NSString *) description {
 	NSString * desc = [NSString stringWithFormat:@"<%@ %p> { \n",[self className],self];
 		
@@ -79,14 +56,21 @@
 	return desc;
 }
 
-
-- (NSString *) emitScript {
+- (NSString *) selector {
+	return [action selector];
+}
+- (NSString *) event {
+	return [action event];
+}
+- (BOOL) preventDefault {
+	return [action preventDefault];
+}
+- (BOOL) stopBubbling {
+	return  [action stopBubbling];
+}
+- (NSString *) script {
 	
-	NSString * script = [NSString stringWithString:@"/** RSTrixie inserted script **/\n"];
-	
-	if( _comment != @"" ) {
-		script = [script stringByAppendingFormat:@"/** %@ **/\n", _comment];
-	}
+	NSString * script = @"";
 	
 	if([[action selector] isEqualToString:@"this"]) {
 		script = [script stringByAppendingString:@"$(this)"];
@@ -94,17 +78,38 @@
 	else {
 		script = [script stringByAppendingFormat:@"$('%@')",[action selector]];
 	}
-	
-	script = [script stringByAppendingFormat:@".bind('%@',function(evt,elem){\n",[action event]];
+	script = [script stringByAppendingFormat:@".bind('%@',function(event,elem){\n",[action event]];
 	for(RSReactionRule * reaction in reactions) 
 	{
-		script = [script stringByAppendingFormat:@"%@\n",[reaction callback]];
+		script = [script stringByAppendingFormat:@"\t%@\n",[reaction script]];
 	}
-	script = [script stringByAppendingString:@"});"];
-
+	script = [script stringByAppendingString:@"})"];
+	
+	if([action preventDefault]) {
+		script = [script stringByAppendingString:@".preventDefault()"];
+	}
+	if([action stopBubbling]) {
+		script = [script stringByAppendingString:@".stopBubbling()"];
+	}
+	script = [script stringByAppendingString:@";\n"];
+	
 	return script;
 }
 
+
+- (NSString *) emitScript {
+	
+	NSString * script = [NSString stringWithString:@"/** RSTrixie inserted script **/\n"];
+	
+	if( [_comment length] > 0 ) {
+		script = [script stringByAppendingFormat:@"/** %@ **/\n", _comment];
+	}
+	else {
+		script = [script stringByAppendingFormat:@"/** Pro tip: Help yourself remember what you were trying to do by commenting your code when you create it. **/\n", _comment];
+	}
+	
+	return [script stringByAppendingFormat:@"%@",[self script]];
+}
 
 
 - (id) valueForUndefinedKey:(NSString *) key {

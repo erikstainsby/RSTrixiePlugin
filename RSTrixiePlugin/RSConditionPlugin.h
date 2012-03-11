@@ -10,9 +10,9 @@
 
 @interface RSConditionPlugin : RSTrixiePlugin
 
-@property (retain) IBOutlet NSString * pluginName;
+@property (retain) NSString * pluginName;
 
-@property (retain) IBOutlet NSString * predicate;
+@property (retain) NSString * predicate;
 @property (retain) IBOutlet NSTextField * selectorField;
 @property (retain) IBOutlet NSTextField * valueOfField;
 

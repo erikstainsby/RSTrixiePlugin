@@ -13,13 +13,16 @@
 	NSString * _action;
 }
 
-@property (retain) IBOutlet NSString * action;
-@property (retain) IBOutlet NSString * pluginName;
+@property (retain) NSString * action;
+@property (retain) NSString * pluginName;
 @property (retain) IBOutlet NSTextField * targetField;
 @property (retain) IBOutlet NSTextField * deltaField;
 @property (retain) IBOutlet NSTextField * delayField;
 @property (retain) IBOutlet NSTextField * periodField;
+@property (retain) IBOutlet NSTextField * opacityField;
+@property (retain) IBOutlet NSTextField * easingField;
+@property (retain) IBOutlet NSTextField * callbackField;
 
-- (NSString *) callback;
+- (NSString *) emitScript;
 
-@end
+@end 

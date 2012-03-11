@@ -12,9 +12,7 @@
 
 @interface RSTrixiePlugin : NSViewController
 
-@property (retain) IBOutlet NSString * pluginName;
-
-
+@property (retain) NSString * pluginName;
 
 - (BOOL) hasSelectorField;
 

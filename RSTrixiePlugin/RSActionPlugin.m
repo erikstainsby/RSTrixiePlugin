@@ -43,7 +43,6 @@
 	return [NSString stringWithFormat:@"$('%@')",[[self selectorField] stringValue]];
 }
 
-
 - (BOOL) hasPreventDefaultButton { 
 	return NO; 
 } 

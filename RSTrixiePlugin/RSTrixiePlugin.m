@@ -23,7 +23,7 @@
 	if( nibNameOrNil == nil ) nibNameOrNil = @"RSTrixiePlugin";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		pluginName = @"Unnamed plugin";
+		[self setPluginName: @"Not Implemented"];
 	}
     return self;
 }
@@ -35,11 +35,9 @@
 - (NSBundle*) nibBundle {	
 	NSString * myBundlePath = [NSBundle pathForResource:[self nibName] 
 												 ofType:@"bundle" 
-											inDirectory:[[NSBundle mainBundle]builtInPlugInsPath]];
+											inDirectory:[[NSBundle mainBundle] builtInPlugInsPath]];
 	return [NSBundle bundleWithPath:myBundlePath];
 }
-
-
 
 - (BOOL) hasSelectorField { 
 	return YES; 

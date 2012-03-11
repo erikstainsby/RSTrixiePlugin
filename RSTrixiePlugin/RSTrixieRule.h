@@ -14,22 +14,19 @@
 @interface RSTrixieRule : RSAbstractRule
 
 @property (retain) RSActionRule * action;
-@property (retain) NSMutableArray * reactions;
-@property (retain) NSMutableArray * conditions;
+@property (retain) NSArray * reactions;
+@property (retain) NSArray * conditions;
 @property (retain) NSString * comment;
 
-- (NSString *) description;
-- (NSString *) emitScript;
+- (NSString *)	selector;
+- (NSString *)	event;
+- (BOOL)		preventDefault;
+- (BOOL)		stopBubbling;
+- (NSString *)  script;
 
-- (NSString *) selector;
-- (NSString *) event;
-- (BOOL) preventDefault;
-- (BOOL) stopBubbling;
-
-- (NSString *) callback;
-- (NSString *) prerequisite;
+- (NSString *)	emitScript;
+- (NSString *)	description;
 
 - (id) valueForUndefinedKey:(NSString *) key;
-
 
 @end

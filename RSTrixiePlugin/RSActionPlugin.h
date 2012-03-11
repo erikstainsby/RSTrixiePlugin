@@ -14,7 +14,7 @@
 }
 
 
-@property (retain) IBOutlet NSString * event;
+@property (retain) NSString * event;
 @property (retain) IBOutlet NSTextField * selectorField;
 @property (retain) IBOutlet NSButton * preventDefaultButton;
 @property (retain) IBOutlet NSButton * stopBubblingButton;
